@@ -1,0 +1,22 @@
+document.children[0].children[4].getElementsByClassName('content')
+HTMLCollection(3) [div.content, div.content, footer.content]
+document.childNodes[1]
+<html>​<script>​…​</script>​<link type=​"text/​css" id=​"dark-mode" rel=​"stylesheet" href(unknown)>​<style type=​"text/​css" id=​"dark-mode-custom-style">​</style>​<head>​…​</head>​<body cz-shortcut-listen=​"true">​…​</body>​</html>​
+document.body
+<body cz-shortcut-listen=​"true">​<h1>​Welcome!​</h1>​<div class=​"content">​…​</div>​<div class=​"content">​…​</div>​<footer class=​"content">​…​</footer>​<script src=​"app.js">​</script>​</body>​
+document.body.link
+""
+document.body.children[3]
+<footer class=​"content">​<p>​Footer outro..​</p>​</footer>​
+document.body.children[3].innerText
+"Footer outro.."
+var te = document.body.children[3].innerText;
+te = "new text"
+"new text"
+print te
+VM1382:1 Uncaught SyntaxError: Unexpected identifier
+console.log(te);
+VM1423:1 new text
+undefined
+document.querySelector('footer')
+<footer class=​"content">​<p>​Footer outro..​</p>​</footer>​
