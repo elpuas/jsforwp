@@ -40,14 +40,14 @@ var appData = {
     imgSrc: 'https://www.elpuas.com/wp-content/uploads/2018/08/moi.jpg'
 };
 
-// create my functions to add title & content from object and added to elements;
+// 3. Create my functions to add title & content from object and added to elements;
 
 function addAppTitle() {
 
     // this variable is local not available outside the function
      
     const theTitle = document.querySelector('.app-header-title');
-    
+
     let titleData;
         
         titleData = appData.title;
@@ -64,6 +64,13 @@ function addAppContent() {
     console.log(appDataContent); 
 
     let appDataAuthor = appData.author;
+
+    console.log(appDataAuthor);
+
+    if ( 'el.puas' === appDataAuthor) {
+
+        console.log('Yeap  he is the author');
+    }
 
     theContentNode.innerText = appDataContent;
 
