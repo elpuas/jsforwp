@@ -41,6 +41,7 @@ var appData = {
     links: ['home', 'form']
 };
 
+  
 console.log(appData.links)
 
 // 3. Create my functions to add title & content from object and added to elements;
@@ -143,6 +144,60 @@ function addMenuItems(){
 }
 
 addMenuItems()
+
+
+// Create Element Node 
+
+var appHeaderMenu = document.querySelector('.app-header');
+var titleHeader = document.querySelector('app-header-title');
+
+var divApp = document.createElement( 'div' );
+var ulList = document.createElement('ul');
+var liList1 = document.createElement('li');
+var liList2 = document.createElement('li');
+
+// This needs to be dynamic using addMenuItems()
+var menuItem1 = document.createTextNode(appData.links[0]);
+var menuItem2 = document.createTextNode(appData.links[1]);
+
+divApp.classList.add('app-menu-container');
+ulList.classList.add('app-menu')
+
+// This needs to be dynamic using addMenuItems()
+
+liList1.appendChild(menuItem1);
+liList2.appendChild(menuItem2);
+ulList.appendChild(liList1);
+ulList.appendChild(liList2);
+
+// Add list to Container
+divApp.appendChild(ulList);
+
+// Test if we are getting everything we want
+console.log(divApp);
+
+// Then Add to Page
+
+// appHeaderMenu.appendChild(divApp);
+
+appHeaderMenu.insertBefore( divApp, null );
+
+console.log(appHeaderMenu);
+
+// Clone Nodes
+
+console.log(appFooter);
+
+var newDiv = divApp.cloneNode(true);
+
+appFooter.insertBefore( newDiv, null );
+
+
+
+
+
+
+
 
 
 
