@@ -37,8 +37,11 @@ var appData = {
     title: 'el.puas JSforWP Practice',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consequat varius augue et pharetra.',
     author: 'el.puas',
-    imgSrc: 'https://www.elpuas.com/wp-content/uploads/2018/08/moi.jpg'
+    imgSrc: 'https://www.elpuas.com/wp-content/uploads/2018/08/moi.jpg',
+    links: ['home', 'form']
 };
+
+console.log(appData.links)
 
 // 3. Create my functions to add title & content from object and added to elements;
 
@@ -72,7 +75,7 @@ function addAppContent() {
         console.log('Yeap  he is the author');
     }
 
-    theContentNode.innerText = appDataContent;
+    theContentNode.innerHTML = '<p>' + appDataContent + '</p>';
 
 }
 
@@ -81,4 +84,66 @@ function addAppContent() {
 addAppTitle();
 
 addAppContent();
+
+// set & get attributes
+
+function addAppAttrs() {
+    
+    var addAttrsNode = document.querySelector('.app-content');
+
+    appCardimgSrc = appData.imgSrc;
+
+    appCard =  '<div class="app-card-container">';
+    appCard += '<img src="/image" class="app-card-image" width="1" height="1" />';
+    appCard += '<a href="/quebonito">Check My Website</a>';
+    appCard += '</div>';
+
+    addAttrsNode.innerHTML = appCard;
+
+} 
+
+addAppAttrs();
+
+// Set my new Attributes
+
+ var img = document.querySelector('img');
+
+ img.setAttribute('src', appData.imgSrc);
+ img.setAttribute('width', '100%');
+ img.setAttribute('height', 'auto');
+
+
+ var a = document.querySelector('a');
+
+ a.setAttribute('href', 'https://elpuas.com');
+ a.classList.toggle('active');
+
+// Create My Menu
+
+function addMenuItems(){
+   
+    console.log(appHeader);
+
+    newAppHeader = function() {
+        
+        for ( item in appData.links ) {
+              
+            console.log(appData.links[item]);
+        }
+      
+        for ( var i = 0, max = appData.links.length; i < max; i++ ) {
+            
+            console.log(appData.links[i]);
+        }
+
+    }
+
+    return newAppHeader();
+    
+}
+
+addMenuItems()
+
+
+
 
