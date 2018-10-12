@@ -1,0 +1,26 @@
+.app {
+    width: 80vw;
+    display: grid;
+    grid-gap: 1.5ch;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0 auto;
+}
+
+div[class*="app-"] {
+    padding: 1.25ch;
+}
+.app-header {
+    background-color: yellow;
+}
+.app-content {
+    background-color: lightgray;
+}
+
+.app-content-form {
+    display: grid;
+    grid-gap: .5ch;
+    grid-template-rows: repeat(5, 3.75ch);
+}
+.app-footer {
+    background-color: pink;
+}
